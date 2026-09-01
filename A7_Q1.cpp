@@ -134,15 +134,15 @@ class SalesManager : public Manager, public Salesman{
     {   }
 
     void accept(){
-        Employee::accept();
+        //Employee::accept();
         Manager::acceptManager();
         Salesman::acceptSalesman();
     }
 
     void display(){
-        Employee::accept();
-        Manager::displayManager();
-        Salesman::displaySalesman();
+        //Employee::accept();
+        Manager::display();
+        Salesman::display();
     }
 };
 

@@ -134,22 +134,25 @@ class SalesManager : public Manager, public Salesman{
     {   }
 
     void accept(){
-        Employee::accept();
+        //Employee::accept();
         Manager::acceptManager();
         Salesman::acceptSalesman();
     }
 
     void display(){
-        Employee::accept();
-        Manager::displayManager();
-        Salesman::displaySalesman();
+        //Employee::accept();
+        Manager::display();
+        Salesman::display();
     }
 };
 
 int main(){
     SalesManager sm;
-    sm.Manager::accept();
-    sm.Salesman::accept();
-    sm.Manager::display();
-    sm.Salesman::display();
+    sm.accept();
+    sm.display();
+
+    // sm.Manager::accept();
+    // sm.Salesman::accept();
+    // sm.Manager::display();
+    // sm.Salesman::display();
 }
