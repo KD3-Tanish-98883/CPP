@@ -146,10 +146,17 @@ class SalesManager : public Manager, public Salesman{
     }
 };
 
+int menuList(){
+    int choice;
+    cout<<"1. Add Manager "<<endl;
+    cout<<"2. Add Salesman "<<endl;
+    cout<<"3. Add Salesmanager "<<endl;
+    cout<<"4. Display the count of all employees with respect to designation"<<endl;
+    cout<<"5. Display All Managers"<<endl;
+    cout<<"6. Display All Salesman"<<endl;
+    cout<<"7. Display All SalesManagers"<<endl;
+}
+
 int main(){
-    SalesManager sm;
-    sm.Manager::accept();
-    sm.Salesman::accept();
-    sm.Manager::display();
-    sm.Salesman::display();
+
 }
