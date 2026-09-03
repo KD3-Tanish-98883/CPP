@@ -134,13 +134,13 @@ class SalesManager : public Manager, public Salesman{
     {   }
 
     void accept(){
-        //Employee::accept();
+        Employee::accept();
         Manager::acceptManager();
         Salesman::acceptSalesman();
     }
 
     void display(){
-        //Employee::accept();
+        Employee::accept();
         Manager::display();
         Salesman::display();
     }
@@ -155,8 +155,45 @@ int menuList(){
     cout<<"5. Display All Managers"<<endl;
     cout<<"6. Display All Salesman"<<endl;
     cout<<"7. Display All SalesManagers"<<endl;
+    cin>>choice;
+    return choice;
 }
 
 int main(){
+    int choice;
+    SalesManager *sm[5];
 
+    for(int i=0; i<=5; i++)
+    {
+    switch (::menuList())
+    {
+        case 1:
+        {
+            sm[i]->Manager::accept();
+            break;
+        }
+        case 2:{
+            sm[i]->Salesman::accept();
+            break;
+        }
+        case 3:{
+            sm[i]->SalesManager::accept();
+            break;
+        }
+        case 4:{
+
+        }
+        case 5:{
+            
+        }
+        case 6:{
+            
+        }
+        case 7:{
+
+        }
+        default:
+        break;
+        }
+    }
 }
